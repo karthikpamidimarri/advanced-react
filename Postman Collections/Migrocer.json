@@ -75,9 +75,19 @@
               "  it('should not have error object', () => {",
               "    pm.expect(jsonData).not.own.property('errors');",
               "  });",
-              "",
+              "var jsonData = pm.response.json();",
+              "  it('should not have error object', () => {",
+              "    pm.expect(jsonData).not.own.property('errors');",
+              "  });",
               "});",
-              ""
+              "",
+              "",
+              " it('should return a JSON response', () => {",
+              "    response.should.be.json;",
+              "  });",
+              "pm.test(\"Content-Type is present\", function () {",
+              "    pm.response.to.have.header(\"Content-Type\");",
+              "});"
             ]
           }
         }
