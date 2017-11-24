@@ -792,6 +792,7 @@
               "            }",
               "          }",
               "      }",
+              "      logOptionValue()",
               "  });",
               "  ",
               "  postman.setEnvironmentVariable('variantId', jsonData.data.supplier_products[0].productsConnection.edges[0].node.variants[0].id);",
