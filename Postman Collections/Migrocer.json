@@ -788,7 +788,6 @@
               "                        console.log(\"To this variant name ---  \" + edges[j].node.name +\"--- doesn't have option values\");",
               "                    }",
               "                    pm.expect(variants[k].option_values.length).to.above(0);",
-              "                    ",
               "                }",
               "            }",
               "          }",
