@@ -1338,7 +1338,7 @@
     },
     {
       "_postman_id": "defec8d7-f325-84ac-10a9-00da9b94af0f",
-      "name": "",
+      "name": "taxonProductsConnection",
       "event": [
         {
           "listen": "test",
