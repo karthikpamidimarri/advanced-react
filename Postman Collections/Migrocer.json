@@ -867,7 +867,7 @@
         ],
         "body": {},
         "url": {
-          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=query{supplier_products(supplier_id:{{storeId}}){ id name  productsConnection(supplier_id:2,after:\"\",first:200){edges{node{id name price  currency images{id url} variants{id can_supply is_master name images{id url}price option_values{id presentation}}}cursor}pageInfo{startCursor endCursor hasNextPage hasPreviousPage}}}}",
+          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=query{supplier_products(supplier_id:{{storeId}}){ id name  productsConnection(supplier_id:{{storeId}},after:\"\",first:200){edges{node{id name price  currency images{id url} variants{id can_supply is_master name images{id url}price option_values{id presentation}}}cursor}pageInfo{startCursor endCursor hasNextPage hasPreviousPage}}}}",
           "host": [
             "{{REACT_APP_API_SERVER}}"
           ],
@@ -877,7 +877,7 @@
           "query": [
             {
               "key": "query",
-              "value": "query{supplier_products(supplier_id:{{storeId}}){ id name  productsConnection(supplier_id:2,after:\"\",first:200){edges{node{id name price  currency images{id url} variants{id can_supply is_master name images{id url}price option_values{id presentation}}}cursor}pageInfo{startCursor endCursor hasNextPage hasPreviousPage}}}}\n",
+              "value": "query{supplier_products(supplier_id:{{storeId}}){ id name  productsConnection(supplier_id:{{storeId}},after:\"\",first:200){edges{node{id name price  currency images{id url} variants{id can_supply is_master name images{id url}price option_values{id presentation}}}cursor}pageInfo{startCursor endCursor hasNextPage hasPreviousPage}}}}\n",
               "equals": true
             }
           ]
