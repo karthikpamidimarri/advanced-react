@@ -1954,6 +1954,74 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "568602f0-13d4-22e6-cdc4-82b47de133c2",
+      "name": "add_new_address copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "eval(globals.postmanBDD);",
+              "",
+              "",
+              "describe('Addresses', () => {",
+              "  var jsonData = pm.response.json();",
+              "  it('should not have error object', () => {",
+              "    pm.expect(jsonData).not.own.property('errors');",
+              "  });",
+              "  ",
+              "  it('should return a 200 response', () => {",
+              "    response.should.have.status(200);",
+              "  });",
+              "",
+              "  it('should return a JSON response', () => {",
+              "    response.should.be.json;",
+              "  });",
+              "  postman.setEnvironmentVariable('address_id', jsonData.data.addNewAddress.newAddressId);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "client",
+            "value": "{{client}}"
+          },
+          {
+            "key": "access-token",
+            "value": "{{access-token}}"
+          },
+          {
+            "key": "uid",
+            "value": "{{uid}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=mutation { addNewAddress(input:{address:   {addressType:OFFICE,firstname:\"KARTHIK\"      lastname:\"Pamidimarri\",     address1:\"asf\",     address2:\"asdf\",     area:\"Kondapur\",     city:\"Hyderabad\",     state:\"Assam\",     country:\"India\",     phone:\"9885280507\",     isDefault:true,     latitude:555.2,     longitude:87.44   }}){     newAddressId   }    }",
+          "host": [
+            "{{REACT_APP_API_SERVER}}"
+          ],
+          "path": [
+            "{{REACT_APP_GQL_PATH}}"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "mutation { addNewAddress(input:{address:   {addressType:OFFICE,firstname:\"KARTHIK\"      lastname:\"Pamidimarri\",     address1:\"asf\",     address2:\"asdf\",     area:\"Kondapur\",     city:\"Hyderabad\",     state:\"Assam\",     country:\"India\",     phone:\"9885280507\",     isDefault:true,     latitude:555.2,     longitude:87.44   }}){     newAddressId   }    }",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     }
   ]
 }
