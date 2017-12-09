@@ -802,7 +802,7 @@
               "                for(k=0; k<variants.length; k++){",
               "                    ",
               "                    if(variants[k].images.length === 0){",
-              "                        console.log(\"To this variant name ---  \" + edges[j].node.name +\"--- doesn't have option values\");",
+              "                        console.log(\"To this variant name ---  \" + edges[j].node.name +\"--- doesn't have images\");",
               "                    }",
               "                    pm.expect(variants[k].images.length).to.above(0);",
               "                }",
