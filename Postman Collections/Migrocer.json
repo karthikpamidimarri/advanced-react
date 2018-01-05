@@ -485,62 +485,6 @@
       "response": []
     },
     {
-      "_postman_id": "e3b34554-e0d5-1780-2b9c-24943ba58038",
-      "name": "edit_account copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "  eval(globals.postmanBDD);",
-              " ",
-              " var jsonData = pm.response.json();",
-              "  it('should not have error object', () => {",
-              "    pm.expect(jsonData).not.own.property('errors');",
-              "  });"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "client",
-            "value": "{{client}}"
-          },
-          {
-            "key": "access-token",
-            "value": "{{access-token}}"
-          },
-          {
-            "key": "uid",
-            "value": "{{uid}}"
-          }
-        ],
-        "body": {},
-        "url": {
-          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=mutation {editAccount(input:{first_name:{{first_name}}, last_name: {{last_name}}, phone: {{phone}}}) {user {email first_name last_name phone}}}",
-          "host": [
-            "{{REACT_APP_API_SERVER}}"
-          ],
-          "path": [
-            "{{REACT_APP_GQL_PATH}}"
-          ],
-          "query": [
-            {
-              "key": "query",
-              "value": "mutation {editAccount(input:{first_name:{{first_name}}, last_name: {{last_name}}, phone: {{phone}}}) {user {email first_name last_name phone}}}",
-              "equals": true
-            }
-          ]
-        },
-        "description": null
-      },
-      "response": []
-    },
-    {
       "_postman_id": "6dccd98c-e1a9-27e7-3ab3-157bd9c3f078",
       "name": "storesDeliveringTo",
       "event": [
@@ -1333,6 +1277,62 @@
           ]
         },
         "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "e3b34554-e0d5-1780-2b9c-24943ba58038",
+      "name": "edit_account copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "  eval(globals.postmanBDD);",
+              " ",
+              " var jsonData = pm.response.json();",
+              "  it('should not have error object', () => {",
+              "    pm.expect(jsonData).not.own.property('errors');",
+              "  });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "client",
+            "value": "{{client}}"
+          },
+          {
+            "key": "access-token",
+            "value": "{{access-token}}"
+          },
+          {
+            "key": "uid",
+            "value": "{{uid}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=mutation {editAccount(input:{first_name:{{first_name}}, last_name: {{last_name}}, phone: {{phone}}}) {user {email first_name last_name phone}}}",
+          "host": [
+            "{{REACT_APP_API_SERVER}}"
+          ],
+          "path": [
+            "{{REACT_APP_GQL_PATH}}"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "mutation {editAccount(input:{first_name:{{first_name}}, last_name: {{last_name}}, phone: {{phone}}}) {user {email first_name last_name phone}}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
       },
       "response": []
     },
