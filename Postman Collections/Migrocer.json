@@ -2103,6 +2103,80 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "3d242c70-382b-b278-0ed6-44e27d175242",
+      "name": "user_details copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "// Load Postman BDD",
+              "eval(globals.postmanBDD);",
+              "",
+              "",
+              "describe('Get User info', () => {",
+              "",
+              "  it('should return a 200 response', () => {",
+              "    response.should.have.status(200);",
+              "  });",
+              "",
+              "  it('should return a JSON response', () => {",
+              "    response.should.be.json;",
+              "  });",
+              "",
+              "  var jsonData = pm.response.json();",
+              "  it('should not have error object', () => {",
+              "    pm.expect(jsonData).not.own.property('errors');",
+              "  });",
+              "  it('should return the user details', () => {",
+              "    pm.expect(jsonData.data.user_details.first_name).to.eql('Karthik');",
+              "  });",
+              "",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "client",
+            "value": "{{client}}"
+          },
+          {
+            "key": "access-token",
+            "value": "{{access-token}}"
+          },
+          {
+            "key": "uid",
+            "value": "{{uid}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "{{REACT_APP_API_SERVER}}/{{REACT_APP_GQL_PATH}}?query=query{user_details{email first_name id last_name phone latitude longitude area }}",
+          "host": [
+            "{{REACT_APP_API_SERVER}}"
+          ],
+          "path": [
+            "{{REACT_APP_GQL_PATH}}"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "query{user_details{email first_name id last_name phone latitude longitude area }}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     }
   ]
 }
