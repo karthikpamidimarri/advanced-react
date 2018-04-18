@@ -1,8 +1,7 @@
 {
   "info": {
-    "name": "Migrocer",
     "_postman_id": "29f61370-c4b5-c1fc-53c1-ad5643310544",
-    "description": "",
+    "name": "Migrocer",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -28,8 +27,7 @@
         "method": "GET",
         "header": [],
         "body": {},
-        "url": "http://bigstickcarpet.com/postman-bdd/dist/postman-bdd.min.js",
-        "description": ""
+        "url": "http://bigstickcarpet.com/postman-bdd/dist/postman-bdd.min.js"
       },
       "response": []
     },
@@ -134,8 +132,7 @@
               "disabled": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -164,17 +161,17 @@
               "",
               "",
               "  it('should not have error object', () => {",
-              "    pm.expect(jsonData).not.own.property('errors');",
+              "    postman.expect(jsonData).not.own.property('errors');",
               "  });",
               "  var jsonData = pm.response.json();",
               "  it('should not have error object', () => {",
-              "    pm.expect(jsonData).not.own.property('errors');",
+              "    postman.expect(jsonData).not.own.property('errors');",
               "  });",
               "",
               "",
               "",
-              "pm.test(\"Content-Type is present\", function () {",
-              "    pm.response.to.have.header(\"Content-Type\");",
+              "postman.test(\"Content-Type is present\", function () {",
+              "    postman.response.to.have.header(\"Content-Type\");",
               "});"
             ]
           }
@@ -233,8 +230,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -314,8 +310,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -423,8 +418,7 @@
               "disabled": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -479,8 +473,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -554,8 +547,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -624,8 +616,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -711,8 +702,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -902,8 +892,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -971,8 +960,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1054,8 +1042,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1137,8 +1124,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1194,8 +1180,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1275,8 +1260,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1352,8 +1336,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1429,8 +1412,7 @@
               "equals": true
             }
           ]
-        },
-        "description": null
+        }
       },
       "response": []
     },
@@ -1503,8 +1485,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1579,8 +1560,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1653,8 +1633,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1721,8 +1700,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1788,8 +1766,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1866,8 +1843,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1931,8 +1907,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -1971,8 +1946,7 @@
           }
         ],
         "body": {},
-        "url": "{{REACT_APP_API_SERVER}}/auth/sign_out",
-        "description": ""
+        "url": "{{REACT_APP_API_SERVER}}/auth/sign_out"
       },
       "response": []
     },
@@ -2099,8 +2073,7 @@
               "equals": true
             }
           ]
-        },
-        "description": null
+        }
       },
       "response": []
     }
